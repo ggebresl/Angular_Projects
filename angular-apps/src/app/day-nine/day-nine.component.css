@@ -1,0 +1,21 @@
+.boldClass{
+    font-weight: bold;
+}
+
+.italicClass{
+    font-style:italic;
+}
+
+.colorClass{
+    color:black;
+    background-color: red;
+}
+
+.button {
+    background-color: green;
+    width:auto;
+    height: 50px;
+    color:white;
+    margin-top:5px; 
+    border-radius: 4px;
+}

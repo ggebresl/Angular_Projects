@@ -1,0 +1,12 @@
+<div id="Class binding">
+<button class="button" [class]="classesToApply" (click)="changeStyle()">classesToApplyExample</button>
+<br/><br/><br/>
+<button [class.colorClass]="isColorClass">Change my color</button>
+<br/><br/><br/>
+<button [ngClass]="addClass()" (click)="changeStyle()">Using ngClass</button>
+</div>
+
+<div id="Style binding">
+<button style="color:red" [style.fontWeight]="isBold ?'bold':'normal'" [style.fontSize.px]="fontSize" [style.width.px]="300">changeStyle</button>
+<button style="color:#ff0000" [ngStyle]="addStyles()">ngStyle</button>
+</div>

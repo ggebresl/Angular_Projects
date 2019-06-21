@@ -1,0 +1,74 @@
+<!-- <div id="send-data-to-parent">
+  <p>Child</p>
+  <input type="text" [(ngModel)]="firstName" placeholder="First name" />
+  <br /><br />
+  <input type="text" [(ngModel)]="lastName" placeholder="Last name" />
+  <br /><br />
+  <button class='button' (click)="sendToParent()"> Send data to Parent</button>
+</div> -->
+
+<div *ngIf="cricket else football">
+  <p>I play cricket</p>
+</div>
+
+<ng-template #football>
+  <p>I play football</p>
+</ng-template>
+
+<ng-template #rugby>
+  <p>I play rugby</p>
+</ng-template>
+
+<div id="demo-for-ngFor" *ngIf="players">
+  <div *ngFor="let player of players">
+    <p>{{player.name}}</p>
+  </div>
+</div>
+<div>
+  <p>Exmple of ng-template with ngFor</p>
+  <ng-template ngFor let-player [ngForOf]="players" let-i="index">
+    <p>{{i + 1}}. {{player.name}} : {{player.country}}:{{player.game}} </p>
+  </ng-template>
+</div>
+<ng-container *ngFor="let player of players">
+  <p>Example of ng-container</p>
+  <div *ngIf="player">
+    <p>{{player.name}}</p>
+  </div>
+</ng-container>
+
+<div id="Demo-for-ng-switch">
+  <p> Example for ng-switch</p>
+  <ul *ngFor="let player of players" [ngSwitch]="player.country">
+    <li *ngSwitchCase="'India'"> {{player.name}}:{{player.game}}</li>
+    <li *ngSwitchCase="'Brazil'">{{ player.name }}:{{player.game}}</li>
+    <li *ngSwitchDefault>{{ player.name }}:{{player.game}}:{{player.country}}</li>
+  </ul>
+</div>
+
+<div id="Demo-for-ng-content">
+  <p>Exmple for ng-content</p>
+  <ng-content></ng-content>
+</div>
+
+<div>
+  <p>Exmple for *ngTemplateOutlet</p>
+<ng-container *ngTemplateOutlet ="football ? football : rugby">
+<p>ng-content vs. *ngTemplateOutlet
+    They both help us to achieve highly customized components but which to choose and when?
+    
+    1) *ngTemplateOutlet gives us some more power by providing more options where ng-content is justa content rendering of the proejcted one
+    there is no default options
+    </p>
+</ng-container>
+
+<div>
+<ul>
+<li *ngFor="let player of players;trackBy:changeInCollection">{{player.name}}:{{player.country}}:{{player.game}}</li>
+
+<button class="button" (click)="getAddedItem()">Refresh players List</button>
+</ul>
+
+</div>
+
+</div>

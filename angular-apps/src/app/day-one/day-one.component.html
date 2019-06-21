@@ -1,0 +1,39 @@
+<div style="text-align:left">
+  <h1>Todays Topic</h1>
+</div>
+
+<div style="text-align:left">
+  <ul>
+    <li><a href="#">Nested componenets and Styles in Angular</a></li>
+    <li><a href="#">Template vs template url in details</a></li>
+
+    <li><a href="#">Binding in angular ---one way</a></li>
+    <div>
+      <!-- <h2>{{text}}</h2>
+      <input type="text" value="Hello"/>
+
+      
+      <button class="button" (click)="display()" value="display">Click</button> -->
+
+      <input (keyup)="onKey($event)" /><p>{{name}}</p>
+     
+      <input type="text" [(ngModel)]="name"/> <p>{{name}}</p>
+      
+      <input type="text" [formControl]="OrgName"/>
+      <button class="button"  (click)="displayOrg()">Click</button>
+    </div>
+
+    <li><a href="#">Angular Interpolation</a></li>
+    <p>The sum of 1 + 1 is {{2 + 2}}.</p>
+    <p>The boy with {{getVal()}}.</p>
+
+    <li><a href="#">Property Binding</a></li>
+  </ul>
+</div>
+<div>
+  <p>
+    <!-- <ng-content></ng-content> -->
+    Count: {{ count }} -
+    <button (click)="increment()">Increment</button>
+  </p>
+</div>

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Sachin Tendulkar",
+    "country": "India",
+    "game": "Cricket"
+  },
+  {
+    "name": "Ronaldhino",
+    "country": "Brazil",
+    "game": "Football"
+  },
+  {
+    "name": "Micheal Jordon",
+    "country": "US",
+    "game": "BasketBall"
+  }
+]

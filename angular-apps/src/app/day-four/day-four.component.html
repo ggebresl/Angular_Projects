@@ -1,0 +1,124 @@
+
+<div>
+<ul *ngFor="let player of playersList1">
+  <li>PlayerList1: {{player.name}}:{{player.country}}:{{player.game}}</li>
+</ul>
+</div>
+<!--<div id="callback-demo">
+<button class="button" (click)="callBackDemo()">click for Callback</button>
+&nbsp;&nbsp;
+<button class="button" (click)="callPromiseForSuccess()">Callback with Promise</button>
+
+&nbsp;&nbsp;
+<button class="button" (click)="callPromiseForCallback(true)">Error callback</button>
+
+&nbsp; &nbsp;
+<button class="button" (click)="callPromiseForCallback(false)">Success callback</button>
+
+&nbsp; &nbsp;
+<button class="button" (click)="imediateReject()">imediateReject</button>
+
+&nbsp; &nbsp;
+<button class="button" (click)="imediateResolve()">imediateResolve</button>
+
+&nbsp; &nbsp;
+<button class="button" (click)="chainingInPromiseResolve()">chainingInPromiseResolve</button>
+
+&nbsp; &nbsp;
+<button class="button" (click)="chainingInPromiseReject()">chainingInPromiseReject</button>
+
+&nbsp; &nbsp;
+<button class="button" (click)="ChainingInPromiseWithError()">ChainingInPromiseWithError</button>
+
+&nbsp; &nbsp;
+<button class="button" (click)="PromiseWithCatch()">PromiseWithCatch</button>
+
+
+</div>-->
+
+
+
+<!--<div id="Demo for Promises">
+  <div>
+    <button class="button"(click)="getPlayersList()">Show Players</button>
+    <hr>
+    <div *ngIf="playersList2">
+        <table style="border:2px solid red;width:300px;" >
+            <th>Name</th>
+            <th>Country</th> 
+            <th>Game</th>
+        <tr *ngFor="let player of playersList2">
+        <td>{{player.name}}</td>
+        <td>{{player.country}}</td>
+        <td>{{player.game}}</td>
+        </tr>
+    </table>
+    </div>
+  </div>
+
+</div>-->
+<br/><br/>
+
+<!--<div id="Demo for Observables">
+<p> Demo for Obsevables Begins from here</p>
+
+<button  class="button" (click)="SimpleObservableCall()">SimpleObservableCall</button>
+<br/> <br/>
+
+<div *ngIf="values">
+  <button class="button" (click)="subscribeToObservable()">Call Observable</button>
+
+  <button class="button" (click)="subscribeToObservaleUsingForEach()">Observable with forEach</button>
+  <table style="border:2px solid red;width:300px;" >
+      <th>Values</th>
+      <tr *ngFor="let value of values">
+        <td>{{value}}</td>
+      </tr>
+  </table>
+
+</div>
+
+<div>
+  <button class="button" (click)="getPlayerFromJson()">getPlayerFromJsonWithTransformation</button>
+    <ul *ngFor="let player of playersList2">
+      <li>PlayerList2:{{player.name}}:{{player.country}}:{{player.game}}</li>
+    </ul>
+    </div>
+
+     <div>
+        <button class="button" (click)="getPlayerFromJsonForDirectSubscribemethod()">Direct subscribe</button>
+        <ul *ngFor="let player of playersList3">
+          <li>Playerlist3: {{player.name}}:{{player.country}}:{{player.game}}</li>
+        </ul>
+        </div>
+
+
+    <div>
+      <button  class="button" (click)="getComputerLanguageDetails()">getComputerLanguageDetails</button>
+          <ul *ngFor="let lang of languagesData">
+            <li>{{lang.language}}:{{lang.inventor}}</li>
+          </ul>
+        </div>
+        </div>
+-->
+         <div>
+          <input type="text" [(ngModel)] = "username" placeholder="User name"/>
+          <input type="password" [(ngModel)]="password" placeholder="Password"/>
+          <button class="button" (click)="signIn()">Login</button>
+        </div>
+
+
+        <div *ngIf="usersData">
+          <p>{{userData}}</p>
+        </div>
+     
+
+        <!-- <div id="router-link-demo" *ngIf="usersData"> -->
+            <div id="router-link-demo">
+          <a [routerLink]="['/day-five','Vinay']" routerLinkActive="active">Go to Day-Five</a>
+        </div> 
+
+       <!--<div>
+          <button class="button" (click)="updateUserName()">Update Username</button><br/><br/>
+          <button class="button" (click)="deleteUserName()">Delete Username</button>
+        </div>-->

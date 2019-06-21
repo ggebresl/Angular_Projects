@@ -1,0 +1,18 @@
+<p>
+  day-five works!
+</p>
+
+<div *ngIf="username">
+  <p>User Name: {{username}}</p>
+</div>
+
+<div *ngIf="providersData">
+  <p>providers Data username:{{providersData.username}}</p>
+</div>
+
+
+<div>
+<button class="button" (click)="demoForPipe()">demoForPipe</button>
+<button class="button" (click)="demoForSubscribe()">demoForSubscribe</button>
+<button class="button" (click)="anotherDemoForPipe()">anotherDemoForPipe</button>
+</div>

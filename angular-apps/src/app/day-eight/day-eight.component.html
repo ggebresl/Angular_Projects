@@ -1,0 +1,46 @@
+<div>
+<p>{{title|uppercase}}</p>
+<p>{{title|lowercase}}</p>
+</div>
+
+<div style="width:600px;">
+  <button class="button" style="float:right;width:100px;border-radius: 4pc;background-color: magenta"(click)="toggleDOB()">Toggle DOB</button>
+<table style="border:2px solid red;width:300px;">
+<th>Name</th>
+<th>Age</th>
+<th>Salary</th>
+<th>DOB</th>
+<th>DOJ</th>
+<th>current Time</th>
+<tr *ngFor="let employee of employeeData">
+  <td>{{employee.name | uppercase}}</td>
+  <td>{{employee.age}}</td>
+  <td>{{employee.salary |currency:"EUR":true}}</td>
+  <td>{{employee.DOB |date:format}}</td>
+  <td> {{employee.DOJ |date : 'dd/MM/yyyy'}}</td>
+  <td>{{employee.currentTime | date:'shortTime'}}</td>
+</tr>
+</table>
+</div>
+<div>
+<p>JSON pipe</p>
+<p>{{employeeData |json}}</p>
+</div>
+<div>
+  <table style="border:2px solid red;width:300px;">
+    <th><p>SLICE pipe</p></th>
+    <th><p>PERCENT pipe</p></th>
+    <th><p>DECIMAL pipe</p></th>
+  <tr>
+  <td><p>{{months | slice : 1:4}}</p></td>
+  
+  <td><p>{{0.54| percent}}</p></td>
+  
+  <td><p>{{123.4527| number:'3.2-2'}}</p></td>
+</tr>
+</table>
+</div>
+<div>
+<p>Multiplication of 5 *4 is {{5|square :4}}</p>  
+<p>Square of 4 is {{4|square:4}}</p>
+</div>

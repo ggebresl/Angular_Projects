@@ -1,0 +1,89 @@
+<!--<div id="template-driven-form" class="form-div">
+  <form class="form" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)" novalidate>
+    <fieldset ngModelGroup="name">
+    <input type="text" name="firstname" placeholder="FirstName" ngModel required><br>
+    <input type="text" name="lastname" placeholder="LastName" ngModel required> <br>
+    </fieldset>
+    <input type="text" name="email" placeholder="Email" ngModel required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"> <br>
+    <input type="text" name="phoneNumber" placeholder="Phone number" ngModel required pattern="^(0|[1-9][0-9]*)$" minlength="10" maxlength="10"> <br>-->
+
+    <!-- <select name="country" ngModel required>
+      <option value="">Please select country</option>
+      <option value="America">America</option>
+      <option value="Canada">Canada</option>
+      <option value="India">India</option>
+      <option value="China">China</option>
+      <option value="Russia">Russia</option>
+    </select>-->
+    <!--<select class="dropdown" name="country" ngModel required>
+        <option value="">Please select country</option>                      
+        <option *ngFor = "let country of countryList"
+          [value] = "country"> {{country}} 
+        </option>
+      </select>
+      <br><br><br>
+
+    <button type="submit" class="button" [disabled]="!userForm.valid">Submit</button>
+  </form>
+
+
+</div>-->
+
+
+
+<!--<div id="template-driven-form" class="form-div">
+  <form class="form" #userForm="ngForm" (ngSubmit)="onSubmitTwoWayBinding(userDetails)" novalidate>
+    <input type="text" name="firstname" placeholder="FirstName" [(ngModel)]="userDetails.firstName" required><br>
+    <input type="text" name="lastname" placeholder="LastName" [(ngModel)]="userDetails.lastName" required> <br>
+    <input type="text" name="email" placeholder="Email" [(ngModel)]="userDetails.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"> <br>
+    <input type="text" name="phoneNumber" placeholder="Phone number" [(ngModel)]="userDetails.phoneNumber" required pattern="^(0|[1-9][0-9]*)$" minlength="10" maxlength="10"> <br>-->
+
+    <!-- <select name="country" ngModel required>
+      <option value="">Please select country</option>
+      <option value="America">America</option>
+      <option value="Canada">Canada</option>
+      <option value="India">India</option>
+      <option value="China">China</option>
+      <option value="Russia">Russia</option>
+    </select>-->
+    <!--<select class="dropdown" name="country" [(ngModel)]="userDetails.country" required>
+                      
+        <option *ngFor = "let country of countryList"
+          [value] = "country"> {{country}} 
+        </option>
+      </select>
+      <br><br><br>
+
+    <button type="submit" class="button" [disabled]="!userForm.valid">Submit</button>
+  </form>
+</div>-->
+
+
+<div id="model-driven-form" class="form-div">
+    <form class="form" [formGroup]="userForm" (ngSubmit)="onModelDrivenSubmit(userForm.value)" novalidate>
+      <fieldset formGroupName="name">
+        <input type="text" name="firstname" placeholder="FirstName" formControlName="firstName"><br>
+        <input type="text" name="lastname" placeholder="LastName" formControlName="lastName"> <br>
+        </fieldset>
+        <input type="text" name="email" placeholder="Email" formControlName="email"> <br>
+        <input type="text" name="phoneNumber" placeholder="Phone number" formControlName="phoneNumber"> <br>
+    
+        <!-- <select name="country" ngModel>
+          <option value="">Please select country</option>
+          <option value="America">America</option>
+          <option value="Canada">Canada</option>
+          <option value="India">India</option>
+          <option value="China">China</option>
+          <option value="Russia">Russia</option>
+        </select>-->
+        <select class="dropdown" name="country" formControlName="country">
+                          
+            <option *ngFor = "let country of countryList"
+              [value] = "country"> {{country}} 
+            </option>
+          </select>
+          <br><br><br>
+    
+        <button type="submit" class="button" [disabled]="!userForm.valid">Submit</button>
+      </form>
+</div>
